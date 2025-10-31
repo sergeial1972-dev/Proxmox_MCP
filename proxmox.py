@@ -28,9 +28,18 @@ proxmox_user_creds = proxmox_user + "@" + proxmox_realm
 
 proxmox = ProxmoxAPI(proxmox_host, user=proxmox_user_creds, password=proxmox_password, verify_ssl=proxmox_ssl, port=proxmox_port)
 
-def main():
-    lxclist = proxmox.nodes("Beta").lxc.get()
-    print(lxclist)
-    
-if __name__ == "__main__":
-    main()
+def nodeinfo(node):
+    nodeinfo = 
+
+def lxcinfo(node):
+    lxcinfo = proxmox.nodes(node).lxc.get()
+    return lxcinfo
+
+
+def vminfo(node):
+    vminfo = proxmox.nodes(node).vm.get()
+    return vminfo
+
+def userinfo():
+    userinfo = proxmox.access.users.get()
+    return userinfo

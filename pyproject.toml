@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "fastmcp>=2.13.0.2",
+    "mcp[cli]>=1.19.0",
     "proxmoxer>=2.2.0",
     "requests>=2.32.5",
 ]
